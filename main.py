@@ -29,6 +29,10 @@ ingresso.imprimirValor()
 ingressovip = IngressoVip(20)
 ingressovip.imprimirValor()
 
-triangulo = Retangulo(20,40)
-triangulo.calculoArea()
+retangulo = Retangulo(30,70)
+retangulo.calculoArea()
+retangulo.calculoPerimetro()
 
+triangulo = Triangulo(40,20)
+triangulo.calculaArea()
+triangulo.calculaPerimetro()

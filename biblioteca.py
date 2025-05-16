@@ -63,6 +63,7 @@ class Gato(Animal):
 
 class Cachorro(Animal):
     def __init__(self,nome,cor):
+        super().__init__(self,nome,)
         self.nome = nome
         self.cor = cor
 
@@ -74,6 +75,7 @@ class Cachorro(Animal):
 
 class Coelho(Animal):
     def __init__(self,nome,cor):
+        super().__init__(nome,cor)
         self.nome = nome
         self.cor = cor
 
@@ -86,9 +88,9 @@ class Coelho(Animal):
 
 class Vaca(Animal):
     def __init__(self, nome, cor):
+        super().__init__(self,nome)
         self.nome = nome
         self.cor = cor
-
     def comer(self):
         print(f"{self.nome} foi comer...")
 
@@ -115,31 +117,34 @@ class Forma():
 
 class Retangulo(Forma):
     def __init__(self,base,altura):
+        super().__init__()
         self.base = base
         self.altura = altura
 
 
     def calculoArea(self):
         self.area = (self.base * self.altura)
-        print(f"A area do retango é: {self.area}")
+        print(f"A area do retangulo é: {self.area}")
 
 
     def calculoPerimetro(self):
-        self.perimetro = (2*self.base + self.altura)
-        print(f"O perimetro do retangulo é: {self.altura}")
+        self.perimetro = 2*(self.base + self.altura)
+        print(f"O perimetro do retangulo é: {self.perimetro}")
 
 
 class Triangulo(Forma):
     def __init__(self,altura,base):
-       self.altura = altura
-       self.base = base
+        super().__init__()
+        self.altura = altura
+        self.base = base
 
     def calculaArea(self):
-        self.area = (self.base * self.altura/2)
+        self.area = (self.base * self.altura)/2
+        print(f"A area do triangulo é: {self.area}")
 
     def calculaPerimetro(self):
-        self.altura = (self.base*3)
-
+        self.perimetro = 3* self.base
+        print(f"O perimetro do triangulo é: {self.perimetro}")
 
 
 
